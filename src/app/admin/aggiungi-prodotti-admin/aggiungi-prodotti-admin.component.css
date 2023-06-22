@@ -1,0 +1,16 @@
+.grid{
+  display: flex;
+  flex-direction: row;
+  max-width: 500px;
+  flex-wrap: wrap;
+  gap:10px;
+  justify-content: center;
+  margin: auto;
+}
+.grid > mat-form-field{
+  width: 200px;
+}
+
+.pagina{
+  min-height: 800px;
+}

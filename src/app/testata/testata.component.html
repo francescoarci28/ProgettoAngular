@@ -1,0 +1,28 @@
+<mat-toolbar color="primary">
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" (click)="sidebarController.toggleSidebar()">
+      <mat-icon>menu</mat-icon>
+  </button>
+
+  <button routerLink="/utente" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>account_circle</mat-icon>
+  </button>
+  <button routerLink="/" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>home</mat-icon>
+  </button>
+  <span>E-commerce</span>
+  <span class="spacer"></span>
+  <span>
+      <mat-form-field class="cerca">
+          <mat-label>Cerca prodotto</mat-label>
+          <input matInput type="text" [(ngModel)]="searchValue">
+          <button matSuffix mat-icon-button [routerLink]="'/cerca/'+searchValue">
+              <mat-icon>search</mat-icon>
+          </button>
+      </mat-form-field>
+  </span>
+  <span class="spacer"></span>
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon" *ngIf="authService.isLogged"
+      style="margin-left:auto"  (click)="sidebarController.toggleSidebarCart()">
+      <mat-icon>shopping_cart</mat-icon>
+  </button>
+</mat-toolbar>

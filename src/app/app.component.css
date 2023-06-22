@@ -1,0 +1,8 @@
+html,body,head{
+  padding: 0;
+  margin:0
+}
+.fixheight{
+  margin:20px;
+  min-height: 600px;
+}

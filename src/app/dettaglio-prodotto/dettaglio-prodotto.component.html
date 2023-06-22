@@ -1,0 +1,20 @@
+
+<div class="grid" *ngIf="prodotto !=undefined">
+  <div>
+    <img src="https://www.altroconsumo.it/-/media/altroconsumo/images/home/hi%20tech/monitor%20pc/test/immagini%20ps/monitor%20pc-17.svg?rev=3573d875-fa68-4eac-8953-db0c46d352bc&la=it-IT&mw=315&hash=7734126C0A71F0BA94036632A3D96ECC" alt="" style="width:400px;">
+  </div>
+  <div>
+
+    <h1>{{prodotto.nome}}</h1>
+    <p>{{prodotto.descrizione}}</p>
+    <p> categoria: {{prodotto.categoria}}</p>
+    <p> prezzo: {{prodotto.prezzo}} euro</p>
+    <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+      <mat-button-toggle value=""(click)="diminuisci_quantita()">-</mat-button-toggle>
+      <mat-button-toggle value="">{{quantita_selezionata}}</mat-button-toggle>
+      <mat-button-toggle value="" (click)="aumenta_quantita()">+</mat-button-toggle>
+    </mat-button-toggle-group>
+    <br/>
+    <button mat-button (click)="acquistaProdotto()" >Acquista</button>
+  </div>
+</div>

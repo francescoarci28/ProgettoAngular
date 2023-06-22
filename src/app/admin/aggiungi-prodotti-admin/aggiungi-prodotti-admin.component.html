@@ -1,0 +1,25 @@
+<div class="pagina">
+  <form action="" class="grid"  [formGroup]="gruppoForm" >
+    <mat-form-field appearance="fill">
+      <mat-label>Nome</mat-label>
+      <input matInput formControlName="nome" required="">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Descrizione</mat-label>
+      <input matInput formControlName="descrizione" required="">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Prezzo</mat-label>
+      <input type="number" matInput formControlName="prezzo" required="">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Quantità</mat-label>
+      <input type="number"matInput formControlName="qta" required="">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Categoria</mat-label>
+      <input matInput formControlName="categoria" required="">
+    </mat-form-field>
+    <button (click)="onSave()">Salva</button>
+  </form>
+</div>

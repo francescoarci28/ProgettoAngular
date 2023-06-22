@@ -1,0 +1,14 @@
+.example-card {
+  width: 300px;
+}
+
+
+.flex-grid{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  gap:20px;
+  margin:15px
+}

@@ -1,0 +1,11 @@
+.grid{
+  display: flex;
+  flex-direction: column;
+  gap : 20px;
+  margin:10px
+}
+
+
+.example-card{
+  width:300px;
+}

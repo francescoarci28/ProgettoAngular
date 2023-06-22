@@ -1,0 +1,29 @@
+<div class="flex-grid">
+  <mat-card class="example-card" *ngFor="let prodotto of prodottiHome">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>{{prodotto.nome}}</mat-card-title>
+        <mat-card-subtitle>{{prodotto.categoria}}</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image src="https://www.altroconsumo.it/-/media/altroconsumo/images/home/hi%20tech/monitor%20pc/test/immagini%20ps/monitor%20pc-17.svg?rev=3573d875-fa68-4eac-8953-db0c46d352bc&la=it-IT&mw=315&hash=7734126C0A71F0BA94036632A3D96ECC">
+
+      <mat-card-content>
+        <p>
+          {{prodotto.descrizione}}
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <a [routerLink]="'/prodotto/'+prodotto.nome"mat-button>Visualizza</a>
+        <button mat-button (click)="aggiungiAlCarrello(prodotto)">Acquista</button>
+      </mat-card-actions>
+    </mat-card>
+</div>
+
+<mat-paginator
+    [length]="elementiTotali"
+    hidePageSize="true"
+    [pageSize]="prodottiPerPagina"
+    aria-label="Select page"
+    (page)="setPaginaPaginator($event)"
+    >
+</mat-paginator>

@@ -1,0 +1,9 @@
+<mat-list role="list">
+
+  <mat-list-item *ngFor="let menuItem of menu" [routerLink]="'/categoria/'+menuItem.link">{{menuItem.name}}</mat-list-item>
+  <div  *ngIf="AuthService.roles.includes('ROLE_ADMIN')">
+  <mat-list-item *ngFor="let menuItem of menuAdmin" [routerLink]="'/'+menuItem.link">{{menuItem.name}}</mat-list-item>
+  </div>
+  <mat-list-item  routerLink="/" (click)="logout()" *ngIf="AuthService.isLogged">LOGOUT</mat-list-item>
+
+</mat-list>

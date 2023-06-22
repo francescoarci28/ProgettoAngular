@@ -1,0 +1,19 @@
+<app-testata></app-testata>
+
+<mat-drawer-container class="example-container" (backdropClick)="sidebarController.sidebarStatusCart = false">
+  <mat-drawer  mode="side" [opened]="sidebarController.sidebarStatus">
+    <app-sidenav></app-sidenav>
+  </mat-drawer>
+  <mat-drawer-content>
+    <div class="fixheight">
+    <router-outlet></router-outlet>
+  </div>
+  </mat-drawer-content>
+
+  <mat-drawer position="end"  mode="over" [opened]="sidebarController.sidebarStatusCart" >
+
+    <app-carrello [isOpen]="sidebarController.sidebarStatusCart"></app-carrello>
+  </mat-drawer>
+
+</mat-drawer-container>
+
